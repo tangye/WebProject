@@ -36,7 +36,7 @@ public class AddActivityServlet extends HttpServlet{
 		activity.belongs=(String)request.getSession().getAttribute("userName");
 		Date now = new Date();
 		DateFormat d3 = DateFormat.getTimeInstance(); 
-	    String str3 = d3.format(now); 
+	        String str3 = d3.format(now); 
 		activity.ID=str3;
 		ActivityDao.addActivity(activity);	
 		out.print(activity.pageURL);
