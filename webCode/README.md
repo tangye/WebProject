@@ -1,4 +1,0 @@
-WebProject
-==========
-
-share our contribution

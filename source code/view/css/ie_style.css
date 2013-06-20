@@ -1,0 +1,14 @@
+.extra-wrapp {zoom:1}
+
+/* Fix CSS styles for IE6 */
+html {
+background-image: url(images/trans.gif);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-color: none;
+}
+.bgstretcher {
+position: absolute !important;
+top: expression(documentElement.scrollTop+body.scrollTop + "px");
+left: 0;
+}
