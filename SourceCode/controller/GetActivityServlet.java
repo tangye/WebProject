@@ -20,7 +20,7 @@ public class GetActivityServlet extends HttpServlet{
 		// TODO Auto-generated method stub
 		
 
-	}
+	}//创建一个GetActivityServlet类,从HttpServlet继承
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse res)
 
@@ -32,7 +32,7 @@ public class GetActivityServlet extends HttpServlet{
 			str +="#";
 			str +=activities.get(i).pageURL;
 			str +="&";
-		}
+		}//以HttpServletRequest类的request作为形参,以HttpServletResponse类的res作为形参,抛出异常
 		res.setCharacterEncoding("UTF-8");
 		res.setHeader("content-type","text/html;charset=UTF-8");
 		PrintWriter out = res.getWriter();
