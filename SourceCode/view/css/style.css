@@ -12,11 +12,11 @@ html {
 body { 
 	background:#9ac005; 
 	font-family:"trebuchet MS", Helvetica, sans-serif; 
-	font-size:100%; 
-	line-height:1em; 
-	color:#352b28; 
-	min-width:913px;
-	height:100%;
+	font-size:100%; /*不缩放*/
+	line-height:1em; /*高度*/
+	color:#352b28; /*颜色*/
+	min-width:913px;/*中宽*/
+	height:100%;/*高度不缩放*/
 }
 
 object { 
@@ -132,7 +132,7 @@ ol {
 	vertical-align:top;	
 	line-height:1.2em;
 }
-#contacts-form textarea { 
+#contacts-form textarea { /*定义各个属性*/
 	width:281px; 
 	height:108px; 
 	overflow:auto;
@@ -209,7 +209,7 @@ ol {
 }
 
 .list2 li {
-	width:100%;
+	width:100%;/*不缩放*/
 	overflow:hidden;
 	vertical-align:top;
 	padding-bottom:26px;
@@ -223,7 +223,7 @@ ol {
 	margin-top:-30px;
 }
 .clients li {
-	width:100%;
+	width:100%;/*不缩放*/
 	overflow:hidden;
 	vertical-align:top;
 	padding-top:30px;
@@ -242,7 +242,7 @@ ol {
 /*========================== OTHER ============================*/
 
 .img-box1 { 
-	width:100%; 
+	width:100%; /*不缩放*/
 	overflow:hidden;
 }
 .img-box1 img { 
@@ -644,7 +644,7 @@ h5 {
 }
 .box1 .left-top-corner { 
 	background:url(images/left-top-corner5.png) no-repeat left top; 
-	height:55px; 
+	height:55px; /*高度*/
 	padding-left:28px;
 }
 .box1 .right-top-corner { 
@@ -655,16 +655,16 @@ h5 {
 .box1 .border-top { 
 	height:55px;
 	background-color:#352b28; 
-	width:100%;
+	width:100%;/*宽度不缩放*/
 }
 .box1 .left-bot-corner { 
 	background:url(images/left-bot-corner5.png) no-repeat left bottom; 
-	height:28px; 
+	height:28px; /*高度*/
 	padding-left:28px;
 }
 .box1 .right-bot-corner { 
 	background:url(images/right-bot-corner5.png) no-repeat right bottom; 
-	height:28px; 
+	height:28px; /*高度*/
 	padding-right:28px;
 }
 .box1 .border-bot { 
@@ -679,7 +679,7 @@ h5 {
 	padding:23px 19px 10px 39px;
 }
 .box1 h4 {
-	color:#fff;
+	color:#fff;/*颜色*/
 	font-weight:normal;
 	text-transform:uppercase;
 	padding:19px 0 0 12px;
@@ -689,7 +689,7 @@ h5 {
 /*---*/
 
 .box2 { 
-	width:100%;
+	width:100%;/*宽度不缩放*/
 	position:relative;
 }
 .box2 .left-top-corner { 
@@ -775,7 +775,7 @@ h5 {
 	position: fixed !important;
 	z-index: 1;
 }
-.bgstretcher, .bgstretcher UL, .bgstretcher UL LI {
+.bgstretcher, .bgstretcher UL, .bgstretcher UL LI {/*初始值*/
 	position: absolute;
 	top: 0;
 	right: 0;
