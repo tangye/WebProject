@@ -1,6 +1,6 @@
 /*
 	Background Stretcher jQuery Plugin
-	� 2009 ajaxBlender.com
+	� 2009 ajaxBlender.com
 	For any questions please visit www.ajaxblender.com 
 	or email us at support@ajaxblender.com
 	
@@ -43,9 +43,9 @@
 		};
 		
 		function _resize(){
-			var winW = $(window).width();
-			var winH = $(window).height();
-			var imgW = 0, imgH = 0;
+			var winW = $(window).width();//窗口宽度赋值给winW
+			var winH = $(window).height();//窗口长度赋值给var winH
+			var imgW = 0, imgH = 0;//初始赋值为0
 
 			//	Update container's height
 			container.width(winW);
@@ -132,8 +132,8 @@
 		resizeProportionally:       true,
 		resizeAnimate:              false,
 		images:                     [],
-		imageWidth:                 1680,
-		imageHeight:                1050,
+		imageWidth:                 1680,//图像宽度赋值1680
+		imageHeight:                1050,//图像长度赋值1050
 		nextSlideDelay:             5000,
 		slideShowSpeed:             'normal',
 		slideShow:                  false
