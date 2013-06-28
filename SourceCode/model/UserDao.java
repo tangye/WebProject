@@ -1,9 +1,9 @@
 package model;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.Connection;//引用Connection包
+import java.sql.ResultSet;//引用ResultSet包
+import java.sql.SQLException;//引用SOLException包
+import java.sql.Statement;//引用Statement包
 
 public class UserDao {
 	public static final byte NOT_EXIST=0;
@@ -20,7 +20,7 @@ public class UserDao {
 					"'" + user.ID + "'" + "," +
 					"'" + user.password + "'" + "," +
 					"'" + user.identity + "'" + 
-					")";
+					")";//为sql赋值
 		Statement st;
 		try {
 			st = (Statement) conn.createStatement();
@@ -28,7 +28,7 @@ public class UserDao {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}       
+		}//异常处理       
         DatabaseUtil.closeConnection(conn);
 	}
 	public static User getWholeInfo(String ID){
