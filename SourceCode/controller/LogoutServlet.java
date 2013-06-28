@@ -2,10 +2,10 @@ package controller;
 
 import java.io.IOException;
 
-import javax.servlet.ServletException;
+import javax.servlet.ServletException；
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletResponse;//导入需要的包
 
 
 
@@ -15,7 +15,7 @@ public class LogoutServlet extends HttpServlet{
 
 			throws ServletException, IOException {
 
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub，类的扩展
 		
 
 	}
@@ -25,4 +25,5 @@ public class LogoutServlet extends HttpServlet{
 			throws ServletException, IOException {
 			request.getSession().removeAttribute("userName");
 	}
+	//对异常的处理
 }
