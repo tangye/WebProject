@@ -1,10 +1,10 @@
 package model;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.Connection;//å¼•ç”¨ConnectionåŒ…
+import java.sql.DriverManager;//å¼•ç”¨DriveManageråŒ…
+import java.sql.ResultSet;//å¼•ç”¨ResultSetåŒ…
+import java.sql.SQLException;//å¼•ç”¨SQLExceptionåŒ…
+import java.sql.Statement;//å¼•ç”¨StatementåŒ…
 
 public class DatabaseUtil {
 	
@@ -15,7 +15,7 @@ public class DatabaseUtil {
 			Statement st = (Statement) conn.createStatement();
 			ResultSet rs = st.executeQuery(sql); 
 			if(rs.next()){	
-				//ÈôÕÒµ½Ôò·µ»Øtrue´ú±í¸ÃÓÃÓÚÒÑ¾­´æÔÚ
+				//ï¿½ï¿½ï¿½Òµï¿½ï¿½ò·µ»ï¿½trueï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½
 				DatabaseUtil.closeConnection(conn);
 				return true;
 			}
@@ -25,16 +25,16 @@ public class DatabaseUtil {
 		}    
 		DatabaseUtil.closeConnection(conn);
 		return false;
-	}
+	}//å¼‚å¸¸å¤„ç†
 	
     public static Connection getConnection() {  
         Connection con = null; 
         try {  
-            Class.forName("com.mysql.jdbc.Driver");// ¼ÓÔØMysqlÊı¾İÇı¶¯            
+            Class.forName("com.mysql.jdbc.Driver");// ï¿½ï¿½ï¿½ï¿½Mysqlï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½            
             con = DriverManager.getConnection(  
-                    "jdbc:mysql://localhost:3306/CampusActivity", "root", "admin");// ´´½¨Êı¾İÁ¬½Ó  
+                    "jdbc:mysql://localhost:3306/CampusActivity", "root", "admin");// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  
         } catch (Exception e) {  
-            System.out.println("Êı¾İ¿âÁ¬½ÓÊ§°Ü" + e.getMessage());  
+            System.out.println("ï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½" + e.getMessage());  
         }  
         return con; 
     } 
@@ -44,7 +44,7 @@ public class DatabaseUtil {
     		try{
     			con.close();
     		}catch(Exception e){
-    			System.out.println("¹Ø±ÕÊı¾İ¿âÊ§°Ü");
+    			System.out.println("ï¿½Ø±ï¿½ï¿½ï¿½ï¿½İ¿ï¿½Ê§ï¿½ï¿½");
     		}
     }
 }
