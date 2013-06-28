@@ -1,10 +1,10 @@
 package model;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
+import java.sql.Connection;//å¼•ç”¨ConnectionåŒ…
+import java.sql.ResultSet;//å¼•ç”¨ResultSetåŒ…
+import java.sql.SQLException;//å¼•ç”¨SQLExceptionåŒ…
+import java.sql.Statement;//å¼•ç”¨StatementåŒ…
+import java.util.ArrayList;//å¼•ç”¨ArrayListåŒ…
 
 public class ActivityDao {
 	
@@ -19,7 +19,7 @@ public class ActivityDao {
 					"'" + activity.title + "'" + "," +
 					"'" + activity.pageURL + "'" + "," +
 					"'" + activity.belongs + "'" + 
-					")";
+					")";//ç»™sqlä¸²èµ‹å€¼
 		Statement st;
 		try {
 			st = (Statement) conn.createStatement();
@@ -27,7 +27,7 @@ public class ActivityDao {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}       
+		}//å¼‚å¸¸é¢„é˜²æœºåˆ¶       
         DatabaseUtil.closeConnection(conn);
 	}
 	
@@ -41,7 +41,7 @@ public class ActivityDao {
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}       
+		}//å¼‚å¸¸é¢„é˜²æœºåˆ¶       
         DatabaseUtil.closeConnection(conn);
 	}
 	public static ArrayList<Activity> getAllActivities(){
@@ -52,7 +52,7 @@ public class ActivityDao {
 			Statement st = (Statement) conn.createStatement();
 			ResultSet rs = st.executeQuery(sql); 
 			while(rs.next()){	
-				//ÈôÕÒµ½Ôò·µ»Øtrue´ú±í¸ÃÓÃÓÚÒÑ¾­´æÔÚ
+				//ï¿½ï¿½ï¿½Òµï¿½ï¿½ò·µ»ï¿½trueï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½
 				Activity activity=new Activity();
 				activity.ID=rs.getString("ID");
 				activity.title=rs.getString("title");
@@ -77,7 +77,7 @@ public class ActivityDao {
 			Statement st = (Statement) conn.createStatement();
 			ResultSet rs = st.executeQuery(sql); 
 			while(rs.next()){	
-				//ÈôÕÒµ½Ôò·µ»Øtrue´ú±í¸ÃÓÃÓÚÒÑ¾­´æÔÚ
+				//ï¿½ï¿½ï¿½Òµï¿½ï¿½ò·µ»ï¿½trueï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½
 				Activity activity=new Activity();
 				activity.ID=rs.getString("ID");
 				activity.title=rs.getString("title");
