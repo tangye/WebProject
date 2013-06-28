@@ -1,19 +1,19 @@
 package controller;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.text.DateFormat;
-import java.util.Date;
+import java.io.IOException;//引入IO包
+import java.io.PrintWriter;//引入IO包
+import java.text.DateFormat;//引入text包
+import java.util.Date;//引入util包
 
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.ServletException;//引入servlet包
+import javax.servlet.http.HttpServlet;//引入servlet包
+import javax.servlet.http.HttpServletRequest;//引入servlet包
+import javax.servlet.http.HttpServletResponse;//引入servlet包
 
-import model.Activity;
-import model.ActivityDao;
-import model.User;
-import model.UserDao;
+import model.Activity;//引入model包
+import model.ActivityDao;//引入model包
+import model.User;//引入model包
+import model.UserDao;//引入model包
 
 @SuppressWarnings("serial")
 public class AddActivityServlet extends HttpServlet{
@@ -24,16 +24,16 @@ public class AddActivityServlet extends HttpServlet{
 		// TODO Auto-generated method stub
 		
 
-	}
+	}//创建一个AddActivityServlet类,从HttpServlet继承而来
 	
 	public void doPost(HttpServletRequest request, HttpServletResponse res)
 
 			throws ServletException, IOException {
-		Activity activity=new Activity();
+		Activity activity=new Activity();//生成一个Activity类的activity
 		PrintWriter out = res.getWriter();
-		activity.title = request.getParameter("title");
-		activity.pageURL=request.getParameter("url");
-		activity.belongs=(String)request.getSession().getAttribute("userName");
+		activity.title = request.getParameter("title");//把tile作为参数输入
+		activity.pageURL=request.getParameter("url");//把url作为参数输入
+		activity.belongs=(String)request.getSession().getAttribute("userName");//把userName作为参数输入
 		Date now = new Date();
 		DateFormat d3 = DateFormat.getTimeInstance(); 
 	        String str3 = d3.format(now); 
